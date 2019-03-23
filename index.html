@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Re:Flex</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="work-zone">
+        <button type="button" id="btn-start" class="btn-start">
+            <i class="fas fa-eye-slash"></i>
+        </button>
+    </div>
+    <div class="set-state-block">
+        <button type="button" id="btn-def-state" class="btn-def-state">
+        Set state</button>
+    </div>
+    <script>
+    $("button").click(function(){
+        $(this).find('i').toggleClass('fa-eye-slash fa-eye')
+    });
+    </script>
+</body>
+</html>
