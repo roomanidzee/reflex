@@ -50,7 +50,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/initialize").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                .formLogin().loginPage("/login")
+                .formLogin().loginPage("/login").successForwardUrl("/profile")
                 .usernameParameter("login")
                 .passwordParameter("password")
                 .defaultSuccessUrl("/signIn")

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="01" author="jadeeugene">
+        <insert tableName="user" schemaName="public">
+            <column name="id" value="1" />
+            <column name="email" value="admin@admin.ru" />
+            <column name="password" value="$2a$10$2Q.SSkGquX5gaS6ak/9j7OVjG6FhJiiOftfhLaI8TD5NCaTsoJR6O" />
+            <column name="role" value="ADMIN" />
+            <column name="name" value="admin" />
+        </insert>
+        <insert tableName="company" schemaName="public">
+            <column name="id" value="1" />
+            <column name="name" value="reflex" />
+            <column name="head_id" value="1" />
+        </insert>
+        <insert tableName="department" schemaName="public">
+            <column name="id" value="1" />
+            <column name="name" value="reflex-kazan" />
+            <column name="head_id" value="1" />
+            <column name="company_id" value="1" />
+        </insert>
+        <update tableName="user" schemaName="public" >
+            <column name="company_id" value="1" />
+            <column name="department_id" value="1"/>
+            <where>email = 'admin@admin.ru'</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>
