@@ -9,6 +9,9 @@
     <include file="db/changelog/0001-create-users-table.xml"/>
     <include file="db/changelog/0002-create-condition-tracking-tables.xml"/>
     <include file="db/changelog/0003-add-default-users.xml"/>
+    <include file="db/changelog/0004-add-default-mood-data.xml"/>
+    <include file="db/changelog/0004-add-default-posture-data.xml"/>
+    <include file="db/changelog/0004-add-default-tiredness-data.xml"/>
 
 
 </databaseChangeLog>

@@ -30,5 +30,15 @@
             <column name="department_id" value="1"/>
             <where>email = 'admin@admin.ru'</where>
         </update>
+        
+        <insert tableName="user" schemaName="public">
+            <column name="id" value="2" />
+            <column name="email" value="user@test.com" />
+            <column name="password" value="qwerty123" />
+            <column name="role" value="USER" />
+            <column name="name" value="Юзер" />
+            <column name="company_id" value="1" />
+            <column name="department_id" value="1"/>
+        </insert>
     </changeSet>
 </databaseChangeLog>
