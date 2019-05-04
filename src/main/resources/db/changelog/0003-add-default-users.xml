@@ -34,7 +34,7 @@
         <insert tableName="user" schemaName="public">
             <column name="id" value="2" />
             <column name="email" value="user@test.com" />
-            <column name="password" value="qwerty123" />
+            <column name="password" value="$2a$10$OytkyNfSuJZuNtc00JKdGOHR2xr/ioNXLgasdwk5OO2hLi8dmBywy" />
             <column name="role" value="USER" />
             <column name="name" value="Юзер" />
             <column name="company_id" value="1" />

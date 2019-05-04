@@ -6,6 +6,7 @@
     <script type="text/javascript" src="js/Chart.bundle.js"></script>
     <script type="text/javascript" src="js/chart_util.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.downCount.js"></script>
 
     <link href="/css/custom.css" rel="stylesheet">
     <meta charset="UTF-8">
@@ -55,7 +56,7 @@
         <button id="init_button" type="button" class="btn btn-outline-dark btn-sm" style="margin-right: 16px;">Set position</button>
 
         <input id="posture_track_switch" type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger" data-size="small" data-on="Posture tracking on" data-off="Posture tracking off" style="margin-left: 6px;">
-        <input id="eyes_rest_switch" type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger" data-size="small" data-on="Eyes rest notice on" data-off="Eyes rest notice off" >
+        <input id="eyes_rest_switch" type="checkbox" checked="false" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" data-size="small" data-on="Eyes rest notice on" data-off="Eyes rest notice off" >
             </#if>
         <button class="p-2 text-dark btn btn-link"  type="button" data-toggle="modal" data-target="#exampleModal2" style="margin-left: 16px;">Logout</button>
         <#else>

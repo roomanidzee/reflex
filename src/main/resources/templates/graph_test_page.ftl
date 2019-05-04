@@ -5,6 +5,39 @@
 <#if isSameDay??>
     <input value="${isSameDay?c}" id="isSameDay" hidden />
 </#if>
+    <style type="text/css">
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+
+        ul.countdown {
+            list-style: none;
+            display: block;
+            text-align: right;
+            color: #484848;
+            font: normal 8px 'Open Sans', sans-serif;
+
+        }
+        ul.countdown li {
+            display: inline-block;
+        }
+
+        ul.countdown li span {
+            font-size: 40px;
+            font-weight: 300;
+            line-height: 80px;
+        }
+        ul.countdown li.seperator {
+            font-size: 40px;
+            line-height: 70px;
+            vertical-align: top;
+        }
+        ul.countdown li p {
+            color: #a7abb1;
+            font-size: 12px;
+            margin: 0;
+        }
+
+    </style>
 
 <!-- Modal morning -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -64,6 +97,18 @@
 
 
 <div class="container">
+
+    <ul class="countdown">
+        <li>
+            <span class="minutes">00</span>
+            <p class="minutes_ref">минут</p>
+        </li>
+        <li class="seperator">:</li>
+        <li>
+            <span class="seconds">00</span>
+            <p class="seconds_ref">секунд</p>
+        </li>
+    </ul>
 
 <!--<div style="width:75%;">-->
 
@@ -495,6 +540,98 @@
 
 
         var timerId = setInterval(cycledFun, 1000 * 3);
+
+        $('#eyes_rest_switch').change(function () {
+
+            if(this.checked){
+
+                var today = new Date();
+
+                var day = today.getDay();
+                var month = today.getMonth();
+                var year = today.getFullYear();
+
+                var hour = today.getHours();
+                var minutes = today.getMinutes() + 25;
+                var seconds = today.getSeconds();
+
+                var result_string = day + '/' + month +  '/' + year + ' ' + hour + ':' + minutes + ':' + seconds;
+
+                $('.countdown').downCount({
+                    date: result_string,
+                    offset: +10
+                }, function () {
+                    alert('Время отдохнуть!');
+                });
+
+                (function ($) {
+
+                    $.fn.downCount = function (options, callback) {
+                        var settings = $.extend({
+                            date: '06/10/2019 12:00:00',
+                            offset: +10
+                        }, options);
+
+                        // Save container
+                        var container = this;
+
+                        /**
+                         * Main downCount function that calculates everything
+                         */
+                        function countdown () {
+                            var target_date = new Date(settings.date), // set target date
+                                current_date = currentDate(); // get fixed current date
+
+                            // difference of dates
+                            var difference = target_date - current_date;
+
+                            // if difference is negative than it's pass the target date
+                            if (difference < 0) {
+                                // stop timer
+                                clearInterval(interval);
+
+                                if (callback && typeof callback === 'function') callback();
+
+                                return;
+                            }
+
+                            // basic math variables
+                            var _second = 1000,
+                                _minute = _second * 60,
+                                _hour = _minute * 60,
+                                _day = _hour * 24;
+
+                            // calculate dates
+                            var minutes = Math.floor((difference % _hour) / _minute),
+                                seconds = Math.floor((difference % _minute) / _second);
+
+                            // fix dates so that it will show two digets
+                            minutes = (String(minutes).length >= 2) ? minutes : '0' + minutes;
+                            seconds = (String(seconds).length >= 2) ? seconds : '0' + seconds;
+
+                            // based on the date change the refrence wording
+                            var ref_days = (days === 1) ? 'day' : 'days',
+                                ref_hours = (hours === 1) ? 'hour' : 'hours',
+                                ref_minutes = (minutes === 1) ? 'minute' : 'minutes',
+                                ref_seconds = (seconds === 1) ? 'second' : 'seconds';
+
+                            // set to DOM
+                            container.find('.minutes').text(minutes);
+                            container.find('.seconds').text(seconds);
+
+                            container.find('.minutes_ref').text(ref_minutes);
+                            container.find('.seconds_ref').text(ref_seconds);
+                        };
+
+                        // start
+                        var interval = setInterval(countdown, 1000);
+                    };
+
+                })(jQuery);
+
+            }
+
+        });
 
     });
 
