@@ -36,6 +36,11 @@
             font-size: 12px;
             margin: 0;
         }
+        ul.countdown p {
+            color: #a7abb1;
+            font-size: 20px;
+            margin: 0;
+        }
 
     </style>
 
@@ -101,13 +106,11 @@
     <ul class="countdown">
         <li>
             <span class="minutes">00</span>
-            <p class="minutes_ref">минут</p>
-        </li>
         <li class="seperator">:</li>
         <li>
             <span class="seconds">00</span>
-            <p class="seconds_ref">секунд</p>
         </li>
+        <p>Time left</p>
     </ul>
 
 <!--<div style="width:75%;">-->
@@ -548,18 +551,19 @@
                 var today = new Date();
 
                 var day = today.getDay();
-                var month = today.getMonth();
+                var month = today.getMonth() + 1;
                 var year = today.getFullYear();
 
                 var hour = today.getHours();
                 var minutes = today.getMinutes() + 25;
                 var seconds = today.getSeconds();
 
-                var result_string = day + '/' + month +  '/' + year + ' ' + hour + ':' + minutes + ':' + seconds;
+                var result_string = month + '/' + day +  '/' + year + ' ' + hour + ':' + minutes + ':' + seconds;
+                console.log("RESULT: " + result_string);
 
                 $('.countdown').downCount({
                     date: result_string,
-                    offset: +10
+                    offset: +25
                 }, function () {
                     alert('Время отдохнуть!');
                 });
@@ -568,7 +572,7 @@
 
                     $.fn.downCount = function (options, callback) {
                         var settings = $.extend({
-                            date: '06/10/2019 12:00:00',
+                            date: result_string,
                             offset: +10
                         }, options);
 
