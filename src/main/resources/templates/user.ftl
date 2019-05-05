@@ -39,6 +39,13 @@
             background: #4CAF50;
             cursor: pointer;
         }
+
+        .smile {
+            margin-right: 59px;
+            width: 30px;
+            height: 30px;
+        }
+
     </style>
 </head>
 <body>
@@ -62,10 +69,20 @@
             <div class="modal-body">
                 <h6>Rate your current mood, please</h6>
                 <div class="slidecontainer">
+                    <img src = "/png/very_angry.png" class="smile"/>
+                    <img src = "/png/angry.png" class="smile"/>
+                    <img src = "/png/neutral.png" class="smile"/>
+                    <img src = "/png/good.png" class="smile"/>
+                    <img src = "/png/very_good.png" class="smile"/>
                     <input type="range" min="1" max="10" value="5" class="slider" id="mood">
                 </div>
                 <h6>Rate your tiredness(10 - very tired)</h6>
                 <div class="slidecontainer">
+                    <img src = "/png/very_angry.png" class="smile"/>
+                    <img src = "/png/angry.png" class="smile"/>
+                    <img src = "/png/neutral.png" class="smile"/>
+                    <img src = "/png/good.png" class="smile"/>
+                    <img src = "/png/very_good.png" class="smile"/>
                     <input type="range" min="1" max="10" value="5" class="slider" id="tiredness">
                 </div>
             </div>
@@ -89,10 +106,20 @@
             <div class="modal-body">
                 <h6>Rate your current mood, please</h6>
                 <div class="slidecontainer">
+                    <img src = "/png/very_angry.png" class="smile"/>
+                    <img src = "/png/angry.png" class="smile"/>
+                    <img src = "/png/neutral.png" class="smile"/>
+                    <img src = "/png/good.png" class="smile"/>
+                    <img src = "/png/very_good.png" class="smile"/>
                     <input type="range" min="1" max="10" value="5" class="slider" id="moodEv">
                 </div>
                 <h6>Rate your tiredness(10 - very tired)</h6>
                 <div class="slidecontainer">
+                    <img src = "/png/very_angry.png" class="smile"/>
+                    <img src = "/png/angry.png" class="smile"/>
+                    <img src = "/png/neutral.png" class="smile"/>
+                    <img src = "/png/good.png" class="smile"/>
+                    <img src = "/png/very_good.png" class="smile"/>
                     <input type="range" min="1" max="10" value="5" class="slider" id="tirednessEv">
                 </div>
             </div>
