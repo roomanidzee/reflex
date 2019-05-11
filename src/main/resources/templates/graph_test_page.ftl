@@ -41,10 +41,7 @@
             font-size: 20px;
             margin: 0;
         }
-        .smile {
-            width: 40px;
-            height: 40px;
-        }
+
 
         .smile-container {
             display: flex;
@@ -52,6 +49,10 @@
             justify-content: space-between;
         }
 
+        .smile{
+            width: 40px;
+            height: 40px;
+        }
         .feature-color{
             color: rgba(73,187,15,0.77);
         }
@@ -61,6 +62,7 @@
             margin-left: auto;
             margin-right: auto;
         }
+
 
     </style>
 
@@ -157,11 +159,11 @@
                 <h6>Rate your current mood</h6>
                 <div class="slidecontainer">
                     <div class="smile-container">
-                        <img src = "/png/very_angry.png"/>
-                        <img src = "/png/angry.png"/>
-                        <img src = "/png/neutral.png"/>
-                        <img src = "/png/good.png"/>
-                        <img src = "/png/very_good.png"/>
+                        <img class="smile" src = "/png/very_angry.png"/>
+                        <img class="smile" src = "/png/angry.png"/>
+                        <img class="smile" src = "/png/neutral.png"/>
+                        <img class="smile" src = "/png/good.png"/>
+                        <img class="smile" src = "/png/very_good.png"/>
                     </div>
                     <br/>
                     <input type="range" min="1" max="5" value="5" class="slider" id="moodEv">
@@ -169,11 +171,11 @@
                 <h6>Rate your current tiredness</h6>
                 <div class="slidecontainer">
                     <div class="smile-container">
-                        <img src = "/png/very_angry.png"/>
-                        <img src = "/png/angry.png"/>
-                        <img src = "/png/neutral.png"/>
-                        <img src = "/png/good.png"/>
-                        <img src = "/png/very_good.png"/>
+                        <img class="smile" src = "/png/very_angry.png"/>
+                        <img class="smile" src = "/png/angry.png"/>
+                        <img class="smile" src = "/png/neutral.png"/>
+                        <img class="smile" src = "/png/good.png"/>
+                        <img class="smile" src = "/png/very_good.png"/>
                     </div>
                     <br/>
                     <input type="range" min="1" max="5" value="5" class="slider" id="tirednessEv">
@@ -778,7 +780,5 @@
     }
 
 </script>
-
-
 
 </#macro>
