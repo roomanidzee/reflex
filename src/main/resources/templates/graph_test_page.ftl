@@ -41,27 +41,63 @@
             font-size: 20px;
             margin: 0;
         }
-
         .smile {
-            margin-right: 75px;
-            width: 20px;
-            height: 20px;
+            width: 40px;
+            height: 40px;
         }
 
-        .smile-before {
-            margin-right: 48px;
-            margin-left: 10px;
-            width: 20px;
-            height: 20px;
+        .smile-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
 
-        .smile-after {
-            margin-left: 60px;
-            width: 20px;
-            height: 20px;
+        .feature-color{
+            color: rgba(73,187,15,0.77);
+        }
+
+        .teext{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
     </style>
+
+<div class = "modal fade" id = "instructionModal" tabindex="-1" role="dialog" aria-labelledby="instructionModalLabel" aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="instructionModalLabel">Welcome!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <p class="teext"><i class="far fa-check-circle"></i>
+                    Sit comfortably and straighten your back, look right into your Webcam and press
+                    <b class="feature-color">Set position</b></p>
+                <p class="teext"><i class="far fa-check-circle"></i>Turn on
+                    <b class="feature-color">Posture Tracking</b> switch if you want to be notified about sitting wrong</p>
+                <p class="teext"><i class="far fa-check-circle"></i>Turn on
+                    <b class="feature-color">Smart Pomodoro</b> switch if you want to be reminded to have a rest every 25 minutes</p>
+
+            </div>
+
+            <div class="modal-footer text-center">
+                Sincerely, your Re:Flex team
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 <!-- Modal morning -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -76,23 +112,27 @@
             <div class="modal-body">
                 <h6>Rate your current mood</h6>
                 <div class="slidecontainer">
-                    <img src = "/png/very_angry.png" class="smile"/>
-                    <img src = "/png/angry.png" class="smile"/>
-                    <img src = "/png/neutral.png" class="smile"/>
-                    <img src = "/png/good.png" class="smile-before"/>
-                    <img src = "/png/very_good.png" class="smile-after"/>
+                    <div class="smile-container">
+                        <img src = "/png/very_angry.png" class="smile"/>
+                        <img src = "/png/angry.png" class="smile"/>
+                        <img src = "/png/neutral.png" class="smile"/>
+                        <img src = "/png/good.png" class="smile"/>
+                        <img src = "/png/very_good.png" class="smile"/>
+                    </div>
                     <br/>
-                    <input type="range" min="1" max="10" value="5" class="slider" id="mood">
+                    <input type="range" min="1" max="5" value="5" class="slider" id="mood">
                 </div>
                 <h6>Rate your current tiredness</h6>
                 <div class="slidecontainer">
-                    <img src = "/png/very_angry.png" class="smile"/>
-                    <img src = "/png/angry.png" class="smile"/>
-                    <img src = "/png/neutral.png" class="smile"/>
-                    <img src = "/png/good.png" class="smile-before"/>
-                    <img src = "/png/very_good.png" class="smile-after"/>
+                    <div class="smile-container">
+                        <img src = "/png/very_angry.png" class="smile"/>
+                        <img src = "/png/angry.png" class="smile"/>
+                        <img src = "/png/neutral.png" class="smile"/>
+                        <img src = "/png/good.png" class="smile"/>
+                        <img src = "/png/very_good.png" class="smile"/>
+                    </div>
                     <br/>
-                    <input type="range" min="1" max="10" value="5" class="slider" id="tiredness">
+                    <input type="range" min="1" max="5" value="5" class="slider" id="tiredness">
                 </div>
             </div>
             <div class="modal-footer">
@@ -116,23 +156,27 @@
             <div class="modal-body">
                 <h6>Rate your current mood</h6>
                 <div class="slidecontainer">
-                    <img src = "/png/very_angry.png" class="smile"/>
-                    <img src = "/png/angry.png" class="smile"/>
-                    <img src = "/png/neutral.png" class="smile"/>
-                    <img src = "/png/good.png" class="smile-before"/>
-                    <img src = "/png/very_good.png" class="smile-after"/>
+                    <div class="smile-container">
+                        <img src = "/png/very_angry.png"/>
+                        <img src = "/png/angry.png"/>
+                        <img src = "/png/neutral.png"/>
+                        <img src = "/png/good.png"/>
+                        <img src = "/png/very_good.png"/>
+                    </div>
                     <br/>
-                    <input type="range" min="1" max="10" value="5" class="slider" id="moodEv">
+                    <input type="range" min="1" max="5" value="5" class="slider" id="moodEv">
                 </div>
                 <h6>Rate your current tiredness</h6>
                 <div class="slidecontainer">
-                    <img src = "/png/very_angry.png" class="smile"/>
-                    <img src = "/png/angry.png" class="smile"/>
-                    <img src = "/png/neutral.png" class="smile"/>
-                    <img src = "/png/good.png" class="smile-before"/>
-                    <img src = "/png/very_good.png" class="smile-after"/>
+                    <div class="smile-container">
+                        <img src = "/png/very_angry.png"/>
+                        <img src = "/png/angry.png"/>
+                        <img src = "/png/neutral.png"/>
+                        <img src = "/png/good.png"/>
+                        <img src = "/png/very_good.png"/>
+                    </div>
                     <br/>
-                    <input type="range" min="1" max="10" value="5" class="slider" id="tirednessEv">
+                    <input type="range" min="1" max="5" value="5" class="slider" id="tirednessEv">
                 </div>
             </div>
             <div class="modal-footer">
@@ -145,6 +189,8 @@
 
 
 <div class="container">
+
+    <a href="#instructionModal" data-toggle="modal">Show instruction</a>
 
     <ul class="countdown">
         <li>
@@ -280,7 +326,7 @@
                         labelString: 'Value'
                     },
                     ticks: {
-                        max: 10,
+                        max: 5,
                         min: 0
                     }
                 }]
@@ -359,14 +405,14 @@
                 if (chart_request["dataType"] === 'Posture'){
                     config.data.datasets = dataset2;
                     config.data.datasets[0].data = data.pointData;
-                    config.options.scales.yAxes[0].ticks.max = 100;
+                    config.options.scales.yAxes[0].ticks.max = 50;
                     statsChart.update();
                 }
                 else {
                     config.data.datasets = dataset1;
                     config.data.datasets[0].data = data.morningData;
                     config.data.datasets[1].data = data.eveningData;
-                    config.options.scales.yAxes[0].ticks.max = 10;
+                    config.options.scales.yAxes[0].ticks.max = 5;
                 }
 
                 statsChart.update();
@@ -600,6 +646,11 @@
                 var hour = today.getHours();
                 var minutes = today.getMinutes() + 25;
                 var seconds = today.getSeconds();
+
+                if( minutes > 60){
+                    minutes = minutes - 60;
+                    hour += 1;
+                }
 
                 var result_string = day + '/' + month +  '/' + year + ' ' + hour + ':' + minutes + ':' + seconds;
                 console.log("RESULT: " + result_string);

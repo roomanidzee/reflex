@@ -40,21 +40,15 @@
             cursor: pointer;
         }
 
+        .smile-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 40px;
+            height: 40px;
+        }
+
         .smile {
-            margin-right: 75px;
-            width: 20px;
-            height: 20px;
-        }
-
-        .smile-before {
-            margin-right: 48px;
-            margin-left: 10px;
-            width: 20px;
-            height: 20px;
-        }
-
-        .smile-after {
-            margin-left: 60px;
             width: 20px;
             height: 20px;
         }
@@ -82,21 +76,25 @@
             <div class="modal-body">
                 <h6>Rate your current mood, please</h6>
                 <div class="slidecontainer">
-                    <img src = "/png/very_angry.png" class="smile"/>
-                    <img src = "/png/angry.png" class="smile"/>
-                    <img src = "/png/neutral.png" class="smile"/>
-                    <img src = "/png/good.png" class="smile-before"/>
-                    <img src = "/png/very_good.png" class="smile-after"/>
+                    <div class="smile-container">
+                        <img src = "/png/very_angry.png" class="smile"/>
+                        <img src = "/png/angry.png" class="smile"/>
+                        <img src = "/png/neutral.png" class="smile"/>
+                        <img src = "/png/good.png" class="smile"/>
+                        <img src = "/png/very_good.png" class="smile"/>
+                    </div>
                     <br/>
                     <input type="range" min="1" max="10" value="5" class="slider" id="mood">
                 </div>
                 <h6>Rate your tiredness(10 - very tired)</h6>
                 <div class="slidecontainer">
-                    <img src = "/png/very_angry.png" class="smile"/>
-                    <img src = "/png/angry.png" class="smile"/>
-                    <img src = "/png/neutral.png" class="smile"/>
-                    <img src = "/png/good.png" class="smile-before"/>
-                    <img src = "/png/very_good.png" class="smile-after"/>
+                    <div class="smile-container">
+                        <img src = "/png/very_angry.png" class="smile"/>
+                        <img src = "/png/angry.png" class="smile"/>
+                        <img src = "/png/neutral.png" class="smile"/>
+                        <img src = "/png/good.png" class="smile"/>
+                        <img src = "/png/very_good.png" class="smile"/>
+                    </div>
                     <br/>
                     <input type="range" min="1" max="10" value="5" class="slider" id="tiredness">
                 </div>
@@ -121,21 +119,25 @@
             <div class="modal-body">
                 <h6>Rate your current mood, please</h6>
                 <div class="slidecontainer">
-                    <img src = "/png/very_angry.png" class="smile"/>
-                    <img src = "/png/angry.png" class="smile"/>
-                    <img src = "/png/neutral.png" class="smile"/>
-                    <img src = "/png/good.png" class="smile-before"/>
-                    <img src = "/png/very_good.png" class="smile-after"/>
+                    <div class="smile-container">
+                        <img src = "/png/very_angry.png" class="smile"/>
+                        <img src = "/png/angry.png" class="smile"/>
+                        <img src = "/png/neutral.png" class="smile"/>
+                        <img src = "/png/good.png" class="smile"/>
+                        <img src = "/png/very_good.png" class="smile"/>
+                    </div>
                     <br/>
                     <input type="range" min="1" max="10" value="5" class="slider" id="moodEv">
                 </div>
                 <h6>Rate your tiredness(10 - very tired)</h6>
                 <div class="slidecontainer">
-                    <img src = "/png/very_angry.png" class="smile"/>
-                    <img src = "/png/angry.png" class="smile"/>
-                    <img src = "/png/neutral.png" class="smile"/>
-                    <img src = "/png/good.png" class="smile-before"/>
-                    <img src = "/png/very_good.png" class="smile-after"/>
+                    <div class="smile-container">
+                        <img src = "/png/very_angry.png" class="smile"/>
+                        <img src = "/png/angry.png" class="smile"/>
+                        <img src = "/png/neutral.png" class="smile"/>
+                        <img src = "/png/good.png" class="smile"/>
+                        <img src = "/png/very_good.png" class="smile"/>
+                    </div>
                     <br/>
                     <input type="range" min="1" max="10" value="5" class="slider" id="tirednessEv">
                 </div>
