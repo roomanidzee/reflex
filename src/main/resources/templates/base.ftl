@@ -54,8 +54,8 @@
             <#if currentUser.role == "USER">
         <button id="init_button" type="button" class="btn btn-outline-dark btn-sm" style="margin-right: 16px;">Set position</button>
 
-        <input id="posture_track_switch" type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger" data-size="small" data-on="Posture tracking on" data-off="Posture tracking off" style="margin-left: 6px;">
-        <input id="eyes_rest_switch" type="checkbox" checked="false" data-toggle="toggle" data-onstyle="success" data-offstyle="danger" data-size="small" data-on="Smart pomodoro on" data-off="Smart pomodoro off" >
+        <input id="posture_track_switch" type="checkbox" checked data-toggle="toggle" data-onstyle="danger" data-offstyle="success" data-size="small" data-on="Posture tracking off" data-off="Posture tracking on" style="margin-left: 6px;">
+        <input id="eyes_rest_switch" type="checkbox" checked="false" data-toggle="toggle" data-onstyle="danger" data-offstyle="success" data-size="small" data-on="Smart pomodoro off" data-off="Smart pomodoro on" >
             </#if>
         <button class="p-2 text-dark btn btn-link"  type="button" data-toggle="modal" data-target="#exampleModal2" style="margin-left: 16px;">Logout</button>
         <#else>
