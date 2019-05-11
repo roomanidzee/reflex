@@ -593,7 +593,7 @@
 
                 var today = new Date();
 
-                var day = today.getDay() + 1;
+                var day = today.getDay();
                 var month = today.getMonth() + 1;
                 var year = today.getFullYear();
 
@@ -601,7 +601,7 @@
                 var minutes = today.getMinutes() + 25;
                 var seconds = today.getSeconds();
 
-                var result_string = month + '/' + day +  '/' + year + ' ' + hour + ':' + minutes + ':' + seconds;
+                var result_string = day + '/' + month +  '/' + year + ' ' + hour + ':' + minutes + ':' + seconds;
                 console.log("RESULT: " + result_string);
 
                 $('.countdown').downCount({
@@ -615,7 +615,7 @@
 
                     $.fn.downCount = function (options, callback) {
                         var settings = $.extend({
-                            date: result_string,
+                            date: '06/10/2019 12:00:00',
                             offset: +10
                         }, options);
 
