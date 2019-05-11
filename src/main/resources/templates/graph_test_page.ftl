@@ -191,9 +191,12 @@
 
 
 <div class="container">
-
-    <a href="#instructionModal" data-toggle="modal">Show instruction</a>
-
+    <div class="row">
+        <div class="col">
+            <a class="btn btn-outline-secondary active text-center" href="#instructionModal" data-toggle="modal" style="margin-top: 35px; display: inline-grid">Show
+                instruction</a>
+        </div>
+        <div class="col">
     <ul class="countdown">
         <li>
             <span class="minutes">00</span>
@@ -203,6 +206,8 @@
         </li>
         <p>time left</p>
     </ul>
+        </div>
+    </div>
 
 <!--<div style="width:75%;">-->
 
