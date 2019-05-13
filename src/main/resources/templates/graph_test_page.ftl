@@ -444,14 +444,20 @@
     if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         // Not adding `{ audio: true }` since we only want video now
         navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+
+
+          try {
+            video.srcObject = stream;
+          } catch (error) {
             video.src = window.URL.createObjectURL(stream);
+          }
+
             video.play();
         });
     }
     // Elements for taking the snapshot
     var canvas = document.getElementById('canvas');
     var context = canvas.getContext('2d');
-    var video = document.getElementById('video');
     var myImage;
 
     function convertCanvasToImage(canvas) {
@@ -513,7 +519,8 @@
 //                    alert("File succesfully uploaded");
             },
             error: function () {
-                // Handle upload error
+              isUpdateProccessStarted = false;
+              // Handle upload error
                 alert("Face not detected");
             }
         });
@@ -585,11 +592,17 @@
             jpegURL = convertCanvasToImage(canvas);
             var myBlob = base64ToBlob(jpegURL, 'image/jpeg');
             myFormData.append('myImage', myBlob);
-            update(myFormData);
+            if(shouldFlexBeChecked || shouldTirednessBeChecked) {
+              update(myFormData);
+            }
 
-            // if (shouldFlexBeChecked) {
+             if (shouldFlexBeChecked) {
                 checkForFlex();
-            // }
+             }
+
+             if(shouldTirednessBeChecked){
+//                 checkForTiredness()
+             }
         }
     };
 
@@ -623,6 +636,8 @@
             console.log('posture_track_switch ' + $(this).prop('checked'));
 
         });
+
+
 
 
         $('#init_button').on('click', function(event) {
