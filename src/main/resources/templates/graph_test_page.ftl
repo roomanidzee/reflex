@@ -159,11 +159,11 @@
                 <h6>Rate your current mood</h6>
                 <div class="slidecontainer">
                     <div class="smile-container">
-                        <img class="smile" src = "/png/very_angry.png"/>
-                        <img class="smile" src = "/png/angry.png"/>
-                        <img class="smile" src = "/png/neutral.png"/>
-                        <img class="smile" src = "/png/good.png"/>
-                        <img class="smile" src = "/png/very_good.png"/>
+                        <img class="smile" src = "/png/very_angry.png" class="smile"/>
+                        <img class="smile" src = "/png/angry.png" class="smile"/>
+                        <img class="smile" src = "/png/neutral.png" class="smile"/>
+                        <img class="smile" src = "/png/good.png" class="smile"/>
+                        <img class="smile" src = "/png/very_good.png" class="smile"/>
                     </div>
                     <br/>
                     <input type="range" min="1" max="5" value="5" class="slider" id="moodEv">
@@ -171,11 +171,11 @@
                 <h6>Rate your current tiredness</h6>
                 <div class="slidecontainer">
                     <div class="smile-container">
-                        <img class="smile" src = "/png/very_angry.png"/>
-                        <img class="smile" src = "/png/angry.png"/>
-                        <img class="smile" src = "/png/neutral.png"/>
-                        <img class="smile" src = "/png/good.png"/>
-                        <img class="smile" src = "/png/very_good.png"/>
+                        <img class="smile" src = "/png/very_angry.png" class="smile"/>
+                        <img class="smile" src = "/png/angry.png" class="smile"/>
+                        <img class="smile" src = "/png/neutral.png" class="smile"/>
+                        <img class="smile" src = "/png/good.png" class="smile"/>
+                        <img class="smile" src = "/png/very_good.png" class="smile"/>
                     </div>
                     <br/>
                     <input type="range" min="1" max="5" value="5" class="slider" id="tirednessEv">
@@ -674,12 +674,18 @@
                     hour += 1;
                 }
 
+                if(minutes < 10){
+                    minutes = '0' + minutes;
+                }
+
+                console.log("DAY: " + day);
+
                 var result_string = day + '/' + month +  '/' + year + ' ' + hour + ':' + minutes + ':' + seconds;
                 console.log("RESULT: " + result_string);
 
                 $('.countdown').downCount({
                     date: result_string,
-                    offset: +10
+                    offset: +11
                 }, function () {
                     alert('Время отдохнуть!');
                 });
@@ -688,8 +694,8 @@
 
                     $.fn.downCount = function (options, callback) {
                         var settings = $.extend({
-                            date: '06/10/2019 12:00:00',
-                            offset: +10
+                            date: result_string,
+                            offset: +1
                         }, options);
 
                         // Save container
